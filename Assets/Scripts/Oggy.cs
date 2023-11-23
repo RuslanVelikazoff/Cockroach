@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Cockroach : MonoBehaviour
+public class Oggy : MonoBehaviour
 {
     [SerializeField]
     private float moveSpeed;
@@ -37,7 +37,7 @@ public class Cockroach : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            gameManager.KillCockroach(this.gameObject);
+            gameManager.KillOggy(this.gameObject);
         }
     }
 }

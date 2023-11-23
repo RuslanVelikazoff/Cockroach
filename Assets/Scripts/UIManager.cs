@@ -8,6 +8,9 @@ public class UIManager : MonoBehaviour
     private Button playButton;
 
     [SerializeField]
+    private Text recordText;
+
+    [SerializeField]
     private Button musicButton;
     [SerializeField]
     private Sprite musicOnSprite;
@@ -23,6 +26,8 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
+        recordText.text = "Рекорд: " + PlayerPrefs.GetInt("HighScore").ToString();
+
         SetButtonSprite();
         ButtonClickAction();
     }
@@ -34,6 +39,7 @@ public class UIManager : MonoBehaviour
             playButton.onClick.RemoveAllListeners();
             playButton.onClick.AddListener(() =>
             {
+                PlayerPrefs.SetInt("Score", 0);
                 SceneManager.LoadScene(1);
             });
         }

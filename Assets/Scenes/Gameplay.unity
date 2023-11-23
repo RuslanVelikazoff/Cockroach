@@ -357,7 +357,7 @@ GameObject:
   - component: {fileID: 293759213}
   - component: {fileID: 293759212}
   m_Layer: 5
-  m_Name: WinText
+  m_Name: LoseText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -419,7 +419,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82cc91725ab2f0c41920038a250d768b, type: 3}
+    m_Font: {fileID: 12800000, guid: 4c05fdc07691d44ffa0e05dca2e23d77, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -431,7 +431,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0412\u044B \u043F\u0440\u043E\u0438\u0433\u0440\u0430\u043B\u0438!"
+  m_Text: You lose!
 --- !u!222 &293759214
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8d9b6c4426a0d43aa99195f4905aea9b, type: 3}
+  m_Sprite: {fileID: 1020102981, guid: 634dd2b455a5a4a1b91ca0f6be9a6125, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -664,7 +664,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2ec4517b64d0144b58f0a1bc6d2bb36e, type: 3}
+  m_Sprite: {fileID: -440363978, guid: 634dd2b455a5a4a1b91ca0f6be9a6125, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -785,7 +785,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 67163324f7a8f420fb6ffa8e11fd984c, type: 3}
+  m_Sprite: {fileID: 794340296, guid: 634dd2b455a5a4a1b91ca0f6be9a6125, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -878,7 +878,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82cc91725ab2f0c41920038a250d768b, type: 3}
+    m_Font: {fileID: 12800000, guid: 4c05fdc07691d44ffa0e05dca2e23d77, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -890,8 +890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043E\u0447\u043A\u043E\u0432:
-    0000"
+  m_Text: 'Scores: 0000'
 --- !u!222 &983443906
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1003,7 +1002,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2ec4517b64d0144b58f0a1bc6d2bb36e, type: 3}
+  m_Sprite: {fileID: -440363978, guid: 634dd2b455a5a4a1b91ca0f6be9a6125, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1307,67 +1306,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 20, y: 1}
   m_EdgeRadius: 0
---- !u!1001 &1615137127
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2211564899198745197, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_Name
-      value: YandexGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745197, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: caf9732433f4dc044845763962493607, type: 3}
 --- !u!1 &1692047628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1511,8 +1449,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8844e39a018f3413a84c19b056320909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cockroachPrefab: {fileID: 6075844642772738725, guid: d4f164238e8a4490e898cec664bb4567, type: 3}
-  oggyPrefab: {fileID: 3800421311239574140, guid: 191cb44999c0d48989afa9ffa70b0d1e, type: 3}
+  obstaclePrefab: {fileID: 6075844642772738725, guid: d4f164238e8a4490e898cec664bb4567, type: 3}
+  allyPrefab: {fileID: 3800421311239574140, guid: 191cb44999c0d48989afa9ffa70b0d1e, type: 3}
+  score: 0
 --- !u!4 &1806154701
 Transform:
   m_ObjectHideFlags: 0
@@ -1878,7 +1817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -832.63, y: 483.08}
+  m_AnchoredPosition: {x: -794, y: 453.08}
   m_SizeDelta: {x: 255.82, y: 113.84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2030504159
@@ -1917,12 +1856,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82cc91725ab2f0c41920038a250d768b, type: 3}
+    m_Font: {fileID: 12800000, guid: 4c05fdc07691d44ffa0e05dca2e23d77, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 69
+    m_MaxSize: 120
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1996,7 +1935,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ec57c30be0da490c937574c7ba328bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8643dbd8c9529483d9be11edf8df4ac1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2047,10 +1986,10 @@ MonoBehaviour:
   backgroundImage: {fileID: 2061376672}
   scoreText: {fileID: 2030504160}
   backgroundSprites:
-  - {fileID: 21300000, guid: 4ec57c30be0da490c937574c7ba328bd, type: 3}
-  - {fileID: 21300000, guid: 08b85669484ca4101810fcc7a74a3328, type: 3}
-  - {fileID: 21300000, guid: 11eb6aaf7501e4e51be42c0ca57d1a7b, type: 3}
-  - {fileID: 21300000, guid: 3bacaad09adb540ea8a1d47ad9fd07fd, type: 3}
+  - {fileID: 21300000, guid: 8643dbd8c9529483d9be11edf8df4ac1, type: 3}
+  - {fileID: 21300000, guid: 896b489fd84e741caa9060193f219bdd, type: 3}
+  - {fileID: 21300000, guid: e6646040e2f1940509c8cd5100ca7db1, type: 3}
+  - {fileID: 21300000, guid: 683fd8fbc88054f0c9485e87be896433, type: 3}
   winPanel: {fileID: 1994626966}
   nextLevelButton: {fileID: 957338151}
   homeButton: {fileID: 994584736}
@@ -2147,7 +2086,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82cc91725ab2f0c41920038a250d768b, type: 3}
+    m_Font: {fileID: 12800000, guid: 4c05fdc07691d44ffa0e05dca2e23d77, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -2159,7 +2098,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041F\u043E\u0431\u0435\u0434\u0430!"
+  m_Text: You win!
 --- !u!222 &2102615747
 CanvasRenderer:
   m_ObjectHideFlags: 0

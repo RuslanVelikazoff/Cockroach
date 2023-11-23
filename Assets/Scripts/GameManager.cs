@@ -4,11 +4,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject cockroachPrefab;
-    private List<GameObject> cockroachs;
+    private GameObject obstaclePrefab;
+    private List<GameObject> obstacles;
 
     [SerializeField]
-    private GameObject oggyPrefab;
+    private GameObject allyPrefab;
 
     [SerializeField]
     private int score;
@@ -22,16 +22,16 @@ public class GameManager : MonoBehaviour
         score = PlayerPrefs.GetInt("Score");
         levelUI.SetScoreText(score);
 
-        int amountCockroach = Random.Range(4, 12);
-        cockroachs = new List<GameObject>(amountCockroach);
+        int amountObstacle = Random.Range(4, 12);
+        obstacles = new List<GameObject>(amountObstacle);
 
-        int amountOggy = Random.Range(1, (int)(amountCockroach / 2));
+        int amountAlly = Random.Range(1, (int)(amountObstacle / 2));
 
-        SpawnCockroach(amountCockroach);
-        SpawnOggy(amountOggy);
+        SpawnObstacle(amountObstacle);
+        SpawnAlly(amountAlly);
     }
 
-    private void SpawnCockroach(int amount)
+    private void SpawnObstacle(int amount)
     {
         for (int i = 0; i < amount; i++)
         {
@@ -40,12 +40,12 @@ public class GameManager : MonoBehaviour
 
             Vector3 spawnPosition = new Vector3(x, y, 0);
 
-            GameObject cockroach = Instantiate(cockroachPrefab, spawnPosition, Quaternion.identity);
-            cockroachs.Add(cockroach);
+            GameObject obstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity);
+            obstacles.Add(obstacle);
         }
     }
 
-    private void SpawnOggy(int amount)
+    private void SpawnAlly(int amount)
     {
         for (int i = 0; i < amount; i++)
         {
@@ -54,13 +54,13 @@ public class GameManager : MonoBehaviour
 
             Vector3 spawnPosition = new Vector3(x, y, 0);
 
-            Instantiate(oggyPrefab, spawnPosition, Quaternion.identity);
+            Instantiate(allyPrefab, spawnPosition, Quaternion.identity);
         }
     }
 
     private void WinGame()
     {
-        if (cockroachs.Count <= 0)
+        if (obstacles.Count <= 0)
         {
             levelUI.WinPanel();
             AudioManager.instance.Play("Win");
@@ -87,19 +87,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void KillCockroach(GameObject cockroach)
+    public void KillObstacle(GameObject obstacle)
     {
         AudioManager.instance.Play("Kill");
         AddScore();
-        Destroy(cockroach);
-        cockroachs.Remove(cockroach);
+        Destroy(obstacle);
+        obstacles.Remove(obstacle);
         WinGame();
     }
 
-    public void KillOggy(GameObject oggy)
+    public void KillAlly(GameObject ally)
     {
         Time.timeScale = 0;
-        Destroy(oggy);
+        Destroy(ally);
         LoseGame();
         Debug.Log("You Lose!");
     }

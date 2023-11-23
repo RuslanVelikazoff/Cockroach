@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        recordText.text = "Рекорд: " + PlayerPrefs.GetInt("HighScore").ToString();
+        recordText.text = "Record: " + PlayerPrefs.GetInt("HighScore").ToString();
 
         SetButtonSprite();
         ButtonClickAction();

@@ -80,7 +80,7 @@ public class LevelUIManager : MonoBehaviour
     {
         losePanel.SetActive(true);
 
-        scoreInLoseText.text = "Количество пойманных тараканов: " + score;
+        scoreInLoseText.text = "Score: " + score;
 
         if (exitButton != null)
         {

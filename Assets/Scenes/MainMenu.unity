@@ -226,7 +226,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5329cc0496b5e4ae08031cd867b3b978, type: 3}
+  m_Sprite: {fileID: 1418045907, guid: 634dd2b455a5a4a1b91ca0f6be9a6125, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ec57c30be0da490c937574c7ba328bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 896b489fd84e741caa9060193f219bdd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -507,7 +507,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 75f1d9d0ef28c4b69b576ae752230a0b, type: 3}
+  m_Sprite: {fileID: 434999450, guid: 634dd2b455a5a4a1b91ca0f6be9a6125, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -600,7 +600,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82cc91725ab2f0c41920038a250d768b, type: 3}
+    m_Font: {fileID: 12800000, guid: 4c05fdc07691d44ffa0e05dca2e23d77, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -612,7 +612,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041C\u0443\u0437\u044B\u043A\u0430"
+  m_Text: Music
 --- !u!222 &823250837
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -796,63 +796,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1330396612
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2211564899198745197, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_Name
-      value: YandexGame
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211564899198745199, guid: caf9732433f4dc044845763962493607, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: caf9732433f4dc044845763962493607, type: 3}
 --- !u!1 &1358718768
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,19 +879,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82cc91725ab2f0c41920038a250d768b, type: 3}
+    m_Font: {fileID: 12800000, guid: 4c05fdc07691d44ffa0e05dca2e23d77, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 69
+    m_MaxSize: 120
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0420\u0435\u043A\u043E\u0440\u0434: 000"
+  m_Text: 'Record: 000'
 --- !u!1 &1445530624
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,7 +967,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 82cc91725ab2f0c41920038a250d768b, type: 3}
+    m_Font: {fileID: 12800000, guid: 4c05fdc07691d44ffa0e05dca2e23d77, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1036,7 +979,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0417\u0432\u0443\u043A\u0438"
+  m_Text: Sound
 --- !u!222 &1445530628
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1148,7 +1091,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c55d1bf9378be41428adaaeb9eb45f0a, type: 3}
+  m_Sprite: {fileID: 841328424, guid: 634dd2b455a5a4a1b91ca0f6be9a6125, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1198,11 +1141,11 @@ MonoBehaviour:
   playButton: {fileID: 1552880288}
   recordText: {fileID: 1358718772}
   musicButton: {fileID: 647565987}
-  musicOnSprite: {fileID: 21300000, guid: 75f1d9d0ef28c4b69b576ae752230a0b, type: 3}
-  musicOffSprite: {fileID: 21300000, guid: b37aa11323a164d73a23d87649ef24a0, type: 3}
+  musicOnSprite: {fileID: 434999450, guid: 634dd2b455a5a4a1b91ca0f6be9a6125, type: 3}
+  musicOffSprite: {fileID: -1709104450, guid: 634dd2b455a5a4a1b91ca0f6be9a6125, type: 3}
   soundButton: {fileID: 113049585}
-  soundOnSprite: {fileID: 21300000, guid: 5329cc0496b5e4ae08031cd867b3b978, type: 3}
-  soundOffSprite: {fileID: 21300000, guid: a6a0ecdd6834140fa92959f6de13ce29, type: 3}
+  soundOnSprite: {fileID: 1418045907, guid: 634dd2b455a5a4a1b91ca0f6be9a6125, type: 3}
+  soundOffSprite: {fileID: 1635979564, guid: 634dd2b455a5a4a1b91ca0f6be9a6125, type: 3}
 --- !u!4 &1856378842
 Transform:
   m_ObjectHideFlags: 0

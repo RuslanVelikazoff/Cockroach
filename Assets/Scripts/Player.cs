@@ -1,7 +1,15 @@
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class Player : MonoBehaviour
 {
+    private GameManager gameManager;
+
+    private void Awake()
+    {
+        gameManager = FindObjectOfType<GameManager>();
+    }
+
     private void Update()
     {
         if (Input.GetMouseButton(0))
@@ -10,7 +18,7 @@ public class Player : MonoBehaviour
 
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 position = transform.position;
-            position = mousePos;
+            position = new Vector3(mousePos.x, mousePos.y, 0);
             transform.position = position;
         }
         else if (Input.touches.Length > 0)
@@ -21,7 +29,7 @@ public class Player : MonoBehaviour
             {
                 Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector3 position = transform.position;
-                position = mousePos;
+                position = new Vector3(mousePos.x, mousePos.y, 0);
                 transform.position = position;
             }
         }
@@ -30,4 +38,26 @@ public class Player : MonoBehaviour
             this.gameObject.tag = "Untagged";
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Marki") && this.gameObject.CompareTag("Player"))
+        {
+            gameManager.KillCockroach(collision.gameObject, collision.tag);
+        }
+        if (collision.CompareTag("Joi") && this.gameObject.CompareTag("Player"))
+        {
+            gameManager.KillCockroach(collision.gameObject, collision.tag);
+        }
+        if (collision.CompareTag("DiDi") && this.gameObject.CompareTag("Player"))
+        {
+            gameManager.KillCockroach(collision.gameObject, collision.tag);
+        }
+
+        if (collision.CompareTag("Bob") && this.gameObject.CompareTag("Player"))
+        {
+            gameManager.KillBob(collision.gameObject);
+        }
+    }
 }
+

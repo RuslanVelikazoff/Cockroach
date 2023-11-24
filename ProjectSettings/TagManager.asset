@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Top
   - Side
+  - Marki
+  - DiDi
+  - Joi
+  - Bob
   layers:
   - Default
   - TransparentFX

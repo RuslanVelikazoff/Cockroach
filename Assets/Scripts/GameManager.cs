@@ -4,11 +4,23 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject cockroachPrefab;
-    private List<GameObject> cockroachs;
+    private GameObject player;
 
     [SerializeField]
-    private GameObject oggyPrefab;
+    private GameObject joiPrefab;
+    private List<GameObject> joiList;
+
+    [SerializeField]
+    private GameObject markiPrefab;
+    private List<GameObject> markiList;
+
+    [SerializeField]
+    private GameObject didiPrefab;
+    private List<GameObject> didiList;
+
+    [SerializeField]
+    private GameObject bobPrefab;
+    private List<GameObject> bobList;
 
     [SerializeField]
     private int score;
@@ -18,20 +30,30 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1;
+        player = Instantiate(player, new Vector3(0, 0, 0), Quaternion.identity);
+
         levelUI = FindObjectOfType<LevelUIManager>();
         score = PlayerPrefs.GetInt("Score");
         levelUI.SetScoreText(score);
 
-        int amountCockroach = Random.Range(4, 12);
-        cockroachs = new List<GameObject>(amountCockroach);
+        int amountJoiPrefab = Random.Range(2, 10);
+        joiList = new List<GameObject>(amountJoiPrefab);
+        SpawnObstacles(amountJoiPrefab, joiPrefab, joiList);
 
-        int amountOggy = Random.Range(1, (int)(amountCockroach / 2));
+        int amountMarkiPrefab = Random.Range(2, 10);
+        markiList = new List<GameObject>(amountMarkiPrefab);
+        SpawnObstacles(amountMarkiPrefab, markiPrefab, markiList);
 
-        SpawnCockroach(amountCockroach);
-        SpawnOggy(amountOggy);
+        int amountDidiPrefab = Random.Range(2, 10);
+        didiList = new List<GameObject>(amountDidiPrefab);
+        SpawnObstacles(amountDidiPrefab, didiPrefab, didiList);
+
+        int amountBobPrefab = Random.Range(1, 5);
+        bobList = new List<GameObject>(amountBobPrefab);
+        SpawnObstacles(amountBobPrefab, bobPrefab, bobList);
     }
 
-    private void SpawnCockroach(int amount)
+    private void SpawnObstacles(int amount, GameObject prefab, List<GameObject> list)
     {
         for (int i = 0; i < amount; i++)
         {
@@ -40,28 +62,16 @@ public class GameManager : MonoBehaviour
 
             Vector3 spawnPosition = new Vector3(x, y, 0);
 
-            GameObject cockroach = Instantiate(cockroachPrefab, spawnPosition, Quaternion.identity);
-            cockroachs.Add(cockroach);
-        }
-    }
-
-    private void SpawnOggy(int amount)
-    {
-        for (int i = 0; i < amount; i++)
-        {
-            float x = Random.Range(-5f, 5f);
-            float y = Random.Range(-3f, 3f);
-
-            Vector3 spawnPosition = new Vector3(x, y, 0);
-
-            Instantiate(oggyPrefab, spawnPosition, Quaternion.identity);
+            GameObject obstacle = Instantiate(prefab, spawnPosition, Quaternion.identity);
+            list.Add(obstacle);
         }
     }
 
     private void WinGame()
     {
-        if (cockroachs.Count <= 0)
+        if (joiList.Count <= 0 && markiList.Count <= 0 && didiList.Count <= 0)
         {
+            Destroy(player);
             levelUI.WinPanel();
             AudioManager.instance.Play("Win");
             Debug.Log("You Win!");
@@ -71,12 +81,13 @@ public class GameManager : MonoBehaviour
     private void LoseGame()
     {
         AudioManager.instance.Play("Lose");
+        Destroy(player);
         levelUI.LosePanel(score);
     }
 
-    private void AddScore()
+    private void AddScore(int addedScores)
     {
-        score += 1;
+        score += addedScores;
         PlayerPrefs.SetInt("Score", score);
 
         levelUI.SetScoreText(score);
@@ -87,19 +98,34 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void KillCockroach(GameObject cockroach)
+    public void KillCockroach(GameObject cockroach, string tag)
     {
         AudioManager.instance.Play("Kill");
-        AddScore();
+
+        if (tag == "DiDi")
+        {
+            AddScore(2);
+            didiList.Remove(cockroach);
+        }
+        if (tag == "Marki")
+        {
+            AddScore(1);
+            markiList.Remove(cockroach);
+        }
+        if (tag == "Joi")
+        {
+            AddScore(3);
+            joiList.Remove(cockroach);
+        }
+
         Destroy(cockroach);
-        cockroachs.Remove(cockroach);
         WinGame();
     }
 
-    public void KillOggy(GameObject oggy)
+    public void KillBob(GameObject bob)
     {
         Time.timeScale = 0;
-        Destroy(oggy);
+        Destroy(bob);
         LoseGame();
         Debug.Log("You Lose!");
     }

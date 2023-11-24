@@ -1,18 +1,15 @@
 using UnityEngine;
 
-public class Oggy : MonoBehaviour
+[RequireComponent(typeof(Rigidbody2D), typeof(BoxCollider2D))]
+public class Obstacle : MonoBehaviour
 {
     [SerializeField]
     private float moveSpeed;
 
     private Vector2 moveDirection;
 
-    private GameManager gameManager;
-
     private void Awake()
     {
-        gameManager = FindObjectOfType<GameManager>();
-
         moveDirection = new Vector2(
             Random.Range(-1f, 1f),
             Random.Range(-1f, 1f)
@@ -33,11 +30,6 @@ public class Oggy : MonoBehaviour
         if (collision.tag == "Top")
         {
             moveDirection.y *= -1f;
-        }
-
-        if (collision.CompareTag("Player"))
-        {
-            gameManager.KillOggy(this.gameObject);
         }
     }
 }

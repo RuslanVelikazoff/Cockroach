@@ -411,12 +411,12 @@ PlayerSettings:
     BANNER_DYNAMIC_2: 
     BANNER_STATIC_1: 
     BANNER_STATIC_2: 
-    CHANGE_BAR_COLOR: 
+    CHANGE_BAR_COLOR: 'background-image: linear-gradient(#00d4ff, #006cff);'
     CHANGE_LOADING_SCREEN_BACKGROUND: 
-    CHANGE_LOGO_IMAGE: 
+    CHANGE_LOGO_IMAGE: 'display: none;'
     CONFIGURE_SHADOWS: 
     CONNECT_WEB_AUDIO_PLUGIN_FILES: 
-    CUSTOMIZE_CURSOR: 
+    CUSTOMIZE_CURSOR: false
     DISABLE_CONSOLE_LOG: 
     ENABLE_CONSOLE: 
     LOCK_ASPECT_RATIO_ON_DESKTOP: true
@@ -683,6 +683,7 @@ PlayerSettings:
   webGLDecompressionFallback: 1
   webGLPowerPreference: 2
   scriptingDefineSymbols:
+    Standalone: YG_PLUGIN_YANDEX_GAME
     WebGL: YG_PLUGIN_YANDEX_GAME
   additionalCompilerArguments: {}
   platformArchitecture: {}

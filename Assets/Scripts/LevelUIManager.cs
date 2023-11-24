@@ -8,13 +8,7 @@ public class LevelUIManager : MonoBehaviour
     private Button menuButton;
 
     [SerializeField]
-    private Image backgroundImage;
-
-    [SerializeField]
     private Text scoreText;
-
-    [SerializeField]
-    private Sprite[] backgroundSprites;
 
     [SerializeField]
     private GameObject winPanel;
@@ -32,9 +26,6 @@ public class LevelUIManager : MonoBehaviour
 
     private void Awake()
     {
-        SetRandomIndex();
-        SetBackground();
-
         ButtonClickAction();
     }
 
@@ -47,32 +38,6 @@ public class LevelUIManager : MonoBehaviour
             {
                 SceneManager.LoadScene(0);
             });
-        }
-    }
-
-    private void SetBackground()
-    {
-        backgroundImage.sprite = backgroundSprites[PlayerPrefs.GetInt("RandomIndex")];
-    }
-
-    private void SetRandomIndex()
-    {
-        int randomIndex = Random.Range(0, backgroundSprites.Length - 1);
-
-        if (!PlayerPrefs.HasKey("RandomIndex"))
-        {
-            PlayerPrefs.SetInt("RandomIndex", randomIndex);
-            return;
-        }
-
-        if (PlayerPrefs.GetInt("RandomIndex") == randomIndex)
-        {
-            SetRandomIndex();
-        }
-
-        else
-        {
-            PlayerPrefs.SetInt("RandomIndex", randomIndex);
         }
     }
 

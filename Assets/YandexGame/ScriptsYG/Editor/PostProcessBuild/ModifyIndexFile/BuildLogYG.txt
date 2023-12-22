@@ -1,2 +1,0 @@
-Build path: /Users/user/Desktop/BuildProject/Tarakan
-Build number: 145

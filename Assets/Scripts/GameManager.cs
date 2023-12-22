@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     private LevelUIManager levelUI;
 
+    public InterstitialAds ad;
+
     private void Awake()
     {
         Time.timeScale = 1;
@@ -51,6 +53,11 @@ public class GameManager : MonoBehaviour
         int amountBobPrefab = Random.Range(1, 5);
         bobList = new List<GameObject>(amountBobPrefab);
         SpawnObstacles(amountBobPrefab, bobPrefab, bobList);
+    }
+
+    private void Start()
+    {
+        ad.ShowAd();
     }
 
     private void SpawnObstacles(int amount, GameObject prefab, List<GameObject> list)

@@ -20,9 +20,14 @@ public class LevelUIManager : MonoBehaviour
     [SerializeField]
     private GameObject losePanel;
     [SerializeField]
+    private Button continueGameButton;
+    [SerializeField]
     private Button exitButton;
     [SerializeField]
     private Text scoreInLoseText;
+
+    [SerializeField]
+    private YG.YandexGame sdk;
 
     private void Awake()
     {
@@ -45,7 +50,16 @@ public class LevelUIManager : MonoBehaviour
     {
         losePanel.SetActive(true);
 
-        scoreInLoseText.text = "Количество пойманных тараканов: " + score;
+        scoreInLoseText.text = "Количество уничтоженных монстров: " + score;
+
+        if (continueGameButton != null)
+        {
+            continueGameButton.onClick.RemoveAllListeners();
+            continueGameButton.onClick.AddListener(() =>
+            {
+                sdk._RewardedShow(1);
+            });
+        }
 
         if (exitButton != null)
         {
@@ -82,5 +96,10 @@ public class LevelUIManager : MonoBehaviour
     public void SetScoreText(int score)
     {
         scoreText.text = score.ToString();
+    }
+
+    public void ContinueGameCul()
+    {
+        SceneManager.LoadScene(1);
     }
 }
